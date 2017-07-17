@@ -1,0 +1,21 @@
+﻿{
+    "DSSConfiguration": {
+      "ResponseConsumerUrl": "https://testcda.pge.red.uy/Firma/ProcesarRespuestaFirma",
+      "ServiceProviderName": "Urudata",
+      "DSSServiceUrl": "https://test-eid.portal.gub.uy/dss/dss/post",
+      "SigningCertificate": {
+        "StoreName": "My",
+        "StoreLocation": "LocalMachine",
+        "Subject": "RUC123456781234"
+      },
+      "DSSCertificate": {
+        "StoreName": "My",
+        "StoreLocation": "LocalMachine",
+        "Subject": "RUC215996060015"
+      },
+      "PropertiesAttributes": {
+        "DocumentCertificatePrefixes": "DNI;IDE",
+        "ThumbprintRootAGESIC": "‎7a1cdde3d2197e7137433d3f99c0b369f706c749"
+      }
+    }
+}

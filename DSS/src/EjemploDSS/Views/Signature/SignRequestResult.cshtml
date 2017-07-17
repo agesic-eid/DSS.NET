@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Sign request result";
+}
+<div id="contenido" class="row">
+    @if (@ViewBag.EsError)
+    {
+        <div class="msg errorGrande">
+            <p class="lead" style="color: red"> @ViewBag.Detalle</p>
+            <p class="lead"> @ViewBag.SubDetalle</p>
+        </div>
+    }
+    else
+    {
+        <div class="msg exito">
+            <p class="lead" style="color:green;">@ViewBag.Detalle</p>
+            <p class="lead"> @ViewBag.SubDetalle</p>
+            <textarea readonly style="color:black; width:1170px; height: 590px; overflow: auto;"> @ViewBag.Documento</textarea>
+        </div>
+    }
+</div>

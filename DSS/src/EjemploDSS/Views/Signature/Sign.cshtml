@@ -1,0 +1,25 @@
+﻿@model Document
+@{
+    ViewBag.Title = "Firmar";
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Firmar documento DSS</h3>
+    </div>
+    <div class="panel-body">
+        <form asp-action="Sign" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="DocumentType"></label>
+                <select class="form-control" asp-for="DocumentType" asp-items="Html.GetEnumSelectList<DocumentType>()"></select>
+                <span class="label-danger" asp-validation-for="DocumentType"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contents"></label>
+                <input asp-for="Contents" type="file" />
+                <span asp-validation-for="Contents"></span>
+            </div>
+            <button type="submit" class="btn btn-primary pull-right">Firmar</button>
+        </form>
+    </div>
+</div>

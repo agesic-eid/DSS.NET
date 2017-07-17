@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <environment names="Development">
+        <link rel="stylesheet" href="~/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="~/css/styles.min.css" asp-append-version="true" />
+    </environment>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Mostrar menú</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" asp-controller="Home">Ejemplo DSS</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a asp-controller="Signature" asp-action="Sign">Firmar documento DSS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <environment names="Development">
+        <script type="text/javascript" src="~/js/jquery.js"></script>
+        <script type="text/javascript" src="~/js/bootstrap.js"></script>
+        <script type="text/javascript" src="~/js/DSS.js"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script type="text/javascript" src="~/js/scripts.min.js"></script>
+    </environment>
+</body>
+</html>

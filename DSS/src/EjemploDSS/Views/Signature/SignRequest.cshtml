@@ -1,0 +1,12 @@
+﻿@model SignRequest
+@{ 
+    ViewBag.Title = "Sign request";
+}
+
+<form method="post" action="@Model.Action">
+    <input type="hidden" name="SignRequest" value="@Model.EncodedSignRequest" />
+</form>
+
+<script type="text/javascript">
+    window.onload = function () { document.forms[0].submit(); }
+</script>
